@@ -1,133 +1,74 @@
-/* ===== BASIC RESET ===== */
+/* Palette: 70% Gray (#444), 20% Black (#111), 10% Green (#008f50) */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-/* ===== HEADER ===== */
+body {
+    background-color: #444; /* 70% Gray */
+    color: #eee;
+}
+
+/* BIG HEADER WITH IMAGE */
 .main-header {
     position: relative;
-    height: 60vh; /* Increased from 10vh to see the background */
-    color: purple;
-    background: url("../images/law-bg.jpg") no-repeat center center/cover;
-    background-color: #f5f5f5; /* Fallback color */
+    height: 70vh; /* Increased Size */
+    background: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
-/* Light overlay */
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Changed from 10% to 100% to cover header */
-    height: 100%;
-    background: rgba(146, 151, 148, 0.6); 
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* 20% Black overlay */
     z-index: 1;
 }
 
-/* ===== NAVBAR ===== */
-.navbar {
+.header-content {
     position: relative;
     z-index: 2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background: rgba(0,0,0,0.3);
+    text-align: center;
+    width: 100%;
 }
 
 .logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: gold;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin: 0 15px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-/* Search Box */
-.search-box {
-    display: flex;
-}
-
-.search-box input {
-    padding: 8px;
-    width: 220px;
-    border: none;
-    outline: none;
-}
-
-.search-box button {
-    padding: 8px 15px;
-    border: none;
-    background: gold;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-/* ===== HERO CONTENT ===== */
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: #ffffff;
-    padding-top: 100px;
-}
-
-.hero-content h1 {
-    font-size: 48px;
+    color: #008f50; /* 10% Green */
+    font-size: 3.5rem;
     margin-bottom: 10px;
 }
 
-/* ===== SERVICES & SECTIONS ===== */
-.services-section, .roles-section, .subjects-section, .books-section, .sellers-section {
-    padding: 60px 80px;
-    text-align: center;
+/* CARDS & SECTIONS */
+.services-section {
+    background-color: #111; /* 20% Black */
+    padding: 50px 20px;
 }
 
-.subjects-container, .services-container, .books-container, .sellers-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
+.service-card {
+    background: #555; /* Gray shade */
+    border-top: 5px solid #008f50; /* Green accent */
+    padding: 20px;
+    border-radius: 5px;
+    color: white;
 }
 
-.subject-card, .service-card, .book-card, .seller-card {
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    text-decoration: none;
-    color: #008f50;
+button {
+    background-color: #008f50; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
     font-weight: bold;
 }
 
-.subject-card:hover, .service-card:hover {
-    transform: translateY(-5px);
-    background: #008f50;
-    color: #fff;
-}
-
-/* ===== FOOTER ===== */
 .main-footer {
-    background: #1e1e1e;
-    color: #cccccc;
+    background-color: #000;
+    padding: 30px;
     text-align: center;
-    padding: 20px;
-    font-size: 14px;
 }
